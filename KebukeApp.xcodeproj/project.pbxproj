@@ -14,6 +14,9 @@
 		A4B769262874477A005DAC2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4B769252874477A005DAC2F /* Assets.xcassets */; };
 		A4B769292874477A005DAC2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4B769272874477A005DAC2F /* LaunchScreen.storyboard */; };
 		A4B769322874650A005DAC2F /* PriceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B769312874650A005DAC2F /* PriceVC.swift */; };
+		A4B769382875634F005DAC2F /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B769372875634F005DAC2F /* APIHelper.swift */; };
+		A4B7693F2876DC20005DAC2F /* Extntion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B7693E2876DC20005DAC2F /* Extntion.swift */; };
+		A4B7694228782540005DAC2F /* DrinkDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B7694128782540005DAC2F /* DrinkDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		A4B769282874477A005DAC2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4B7692A2874477A005DAC2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4B769312874650A005DAC2F /* PriceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceVC.swift; sourceTree = "<group>"; };
+		A4B769372875634F005DAC2F /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
+		A4B7693E2876DC20005DAC2F /* Extntion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extntion.swift; sourceTree = "<group>"; };
+		A4B7694128782540005DAC2F /* DrinkDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,9 @@
 				A4B769272874477A005DAC2F /* LaunchScreen.storyboard */,
 				A4B7692A2874477A005DAC2F /* Info.plist */,
 				A4B769312874650A005DAC2F /* PriceVC.swift */,
+				A4B769372875634F005DAC2F /* APIHelper.swift */,
+				A4B7693E2876DC20005DAC2F /* Extntion.swift */,
+				A4B7694128782540005DAC2F /* DrinkDetailVC.swift */,
 			);
 			path = KebukeApp;
 			sourceTree = "<group>";
@@ -142,7 +151,10 @@
 			files = (
 				A4B769322874650A005DAC2F /* PriceVC.swift in Sources */,
 				A4B769212874476E005DAC2F /* ViewController.swift in Sources */,
+				A4B7694228782540005DAC2F /* DrinkDetailVC.swift in Sources */,
 				A4B7691D2874476E005DAC2F /* AppDelegate.swift in Sources */,
+				A4B769382875634F005DAC2F /* APIHelper.swift in Sources */,
+				A4B7693F2876DC20005DAC2F /* Extntion.swift in Sources */,
 				A4B7691F2874476E005DAC2F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
