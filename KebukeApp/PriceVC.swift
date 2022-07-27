@@ -8,8 +8,13 @@
 import UIKit
 
 
-class PriceVC: UIViewController{
+class PriceVC: UIViewController, ShowDelegate  {
+    
+
     @IBOutlet weak var priceTableView: UITableView!
+    @IBOutlet weak var viewCart: UIView!
+    var myCart : ShoppingCart?
+    
     var drinks: [Record] = []
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,17 +23,36 @@ class PriceVC: UIViewController{
         self.priceTableView.dataSource = self
         self.priceTableView.rowHeight = 100
         self.navigationItem.setHidesBackButton(true, animated: false)
-
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("viewWillAppear")
+        print(" myCart?.drinkOrders.isEmpty",  myCart?.drinkOrders.isEmpty)
+        self.viewCart.isHidden = myCart?.drinkOrders.isEmpty ?? true
+                
     }
     
     
     @IBAction func goToDetail(_ sender: Any) {
-        guard let VC = storyboard?.instantiateViewController(withIdentifier: "DrinkDetailVC") as? DrinkDetailVC else {
-            print("cant find DrinkDetailVC")
-            return
+//        guard let VC = storyboard?.instantiateViewController(withIdentifier: "DrinkDetailVC") as? DrinkDetailVC else {
+//            print("cant find DrinkDetailVC")
+//            return
+//        }
+//        self.navigationController?.pushViewController(VC, animated: false)
+//
+        
+    }
+    func show(_ drink : DrinkOrder) {
+        print("show")
+        if let cart = myCart {
+            cart.drinkOrders.append(drink)
+            cart.totalAmount += drink.price
+        } else {
+            self.myCart = ShoppingCart()
+            self.myCart?.drinkOrders.append(drink)
         }
-        self.navigationController?.pushViewController(VC, animated: false)
-     
+        
+
         
     }
     
@@ -53,6 +77,20 @@ extension PriceVC: UITableViewDelegate  ,UITableViewDataSource{
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var record = drinks[indexPath.row]
+        guard let VC = storyboard?.instantiateViewController(withIdentifier: "DrinkDetailVC") as? DrinkDetailVC else {
+                   print("cant find DrinkDetailVC")
+                   return
+               }
+        
+        VC.record = record
+        VC.delegate? = self
+        self.navigationController?.pushViewController(VC, animated: false)
+        
+    }
+    
+    
 }
 
 class PriceCell: UITableViewCell {
@@ -69,3 +107,9 @@ class PriceCell: UITableViewCell {
     
     
 }
+
+protocol ShowDelegate: AnyObject {
+    func show(_ drink: DrinkOrder)
+}
+
+

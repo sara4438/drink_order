@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A48E58FB288A85E1002459FE /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E58FA288A85E1002459FE /* CartVC.swift */; };
+		A48E58FE288A87EE002459FE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E58FD288A87EE002459FE /* Model.swift */; };
 		A4B7691D2874476E005DAC2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B7691C2874476E005DAC2F /* AppDelegate.swift */; };
 		A4B7691F2874476E005DAC2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B7691E2874476E005DAC2F /* SceneDelegate.swift */; };
 		A4B769212874476E005DAC2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B769202874476E005DAC2F /* ViewController.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A48E58FA288A85E1002459FE /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
+		A48E58FD288A87EE002459FE /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A4B769192874476E005DAC2F /* KebukeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KebukeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4B7691C2874476E005DAC2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4B7691E2874476E005DAC2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 				A4B769372875634F005DAC2F /* APIHelper.swift */,
 				A4B7693E2876DC20005DAC2F /* Extntion.swift */,
 				A4B7694128782540005DAC2F /* DrinkDetailVC.swift */,
+				A48E58FA288A85E1002459FE /* CartVC.swift */,
+				A48E58FD288A87EE002459FE /* Model.swift */,
 			);
 			path = KebukeApp;
 			sourceTree = "<group>";
@@ -149,8 +155,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A48E58FE288A87EE002459FE /* Model.swift in Sources */,
 				A4B769322874650A005DAC2F /* PriceVC.swift in Sources */,
 				A4B769212874476E005DAC2F /* ViewController.swift in Sources */,
+				A48E58FB288A85E1002459FE /* CartVC.swift in Sources */,
 				A4B7694228782540005DAC2F /* DrinkDetailVC.swift in Sources */,
 				A4B7691D2874476E005DAC2F /* AppDelegate.swift in Sources */,
 				A4B769382875634F005DAC2F /* APIHelper.swift in Sources */,
